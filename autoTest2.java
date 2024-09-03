@@ -52,9 +52,16 @@ public class autoTest2 {
         WebElement sumInput = driver.findElement(By.id("connection-sum"));
 
         phoneInput.sendKeys("297777777");
-        sumInput.sendKeys("1550");
+        sumInput.sendKeys("450");
 
         WebElement continueButton = driver.findElement(By.xpath("//button[contains(text(), 'Продолжить')]"));
         continueButton.click();
+    }
+    
+    @After
+    public void tearDown () {
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }

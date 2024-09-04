@@ -43,7 +43,7 @@ public class PhoneBook {
         List<String> numeroTrio = pb.get("Хоккинг");
         System.out.println("Телефоны Хоккингов: " + numeroTrio);
 
-        List<String> notExistant = pb.get("Сидоров");
-        System.out.println("Телефоны Сидорова: " + notExistant);
+        List<String> notExistant = pb.get("Джобс");
+        System.out.println("Телефоны Джобсов: " + notExistant);
     }
 }

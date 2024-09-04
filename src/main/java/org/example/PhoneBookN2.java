@@ -39,7 +39,7 @@ public class PhoneBookN2 {
             System.out.println("Телефоны Дуровых: " + numeroUno);
 
             List<String> numeroDue = pb.get("Гейтс");
-            System.out.println("Телефоны Петрова: " + numeroDue);
+            System.out.println("Телефоны Гейтсов: " + numeroDue);
 
             List<String> numeroTrio = pb.get("Хоккинг");
             System.out.println("Телефоны Хоккингов: " + numeroTrio);

@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class PostmanEchoDeleteRequestTest {
+public class NewPostmanEchoDeleteRequestTest {
 
     @Test
     public void testDeleteRequest() {
@@ -14,15 +14,14 @@ public class PostmanEchoDeleteRequestTest {
         String requestBody = "This data will be deleted";
 
         Response response = given()
-                .queryParam("data", requestBody)
+                .body(requestBody)
                 .when()
                 .delete();
 
         Assert.assertEquals(200, response.getStatusCode());
 
-        String expectedJson = "{\"data\":\"This data will be deleted\"}";
-        String actualJson = response.asString();
+        String actualData = response.jsonPath().getString("data");
 
-        Assert.assertEquals(expectedJson, actualJson);
+        Assert.assertEquals(requestBody, actualData);
     }
 }
